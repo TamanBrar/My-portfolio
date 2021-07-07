@@ -1,0 +1,504 @@
+/* stops padding from adding to the width/height of a div */
+* {
+    box-sizing: border-box;
+}
+
+
+/* GENERAL STYLES */
+
+body {
+    /* DO NOT REMOVE */
+    margin: 0;
+    background: #000;
+    overflow: hidden;
+    
+    /* font styles for entire app */
+    font-family: Arial, sans-serif;
+    color: #FFF;
+    
+    /* UNCOMMENT THIS WHEN RUNNING ON TOUCHSCREEN ONLY */
+/*    cursor: none;*/
+}
+
+main, section, header, footer {
+    position: absolute;
+}
+
+main {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background-image: url("../images/background.jpg");
+}
+
+header {
+    z-index: 500;
+}
+
+#logo img{
+    text-align: center;
+    top: 15px;
+    right: 90px;
+    width: auto;
+    height: 135px;
+    z-index: 100000000;
+    position: absolute;
+}
+
+header {
+    width: 1920px;
+    height: 70px;
+    
+    /* temporary screen text styles - REMOVE AND ADD YOUR OWN */
+    background-image: url("../images/background.jpg");
+    color: #fff;
+    font-size: 50px;
+    top: 10px;
+    font-family: PT Mono;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    
+}
+
+footer {
+    width: 1920px;
+    height: 50px;
+    bottom: 0;
+    
+    /* temporary screen text styles - REMOVE AND ADD YOUR OWN */
+   
+    color: #ffffff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section {
+    width: 1920px;
+    height: 1080px;
+}
+
+#promotion {
+    z-index: 10000;
+}
+
+
+/* STYLES FOR OUTFIT SCREEN */
+
+#genderTitle {
+    position: absolute;
+    top: 70px;
+    left: 110px;
+    font-family: Swis721 Blk BT;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#outfitImgs {
+    position: absolute;
+    top: 130px;
+    left: 110px;
+    width: 800px;
+    height: 750px;
+    overflow: hidden;
+    border: 1px #fff solid;
+    background-color: rgba(255,255,255, 0.5);
+   
+}
+
+.swiper-slide {
+    width: 800px;
+    
+    /* temporary screen text styles - REMOVE */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+/* SLIDER SIZES... height and width can be changed */
+#headImg {
+    width: 800px;
+    height: 108px;
+      
+}
+
+#torsoImg {
+    width: 800px;
+    height: 257px;
+}
+
+#legsImg {
+    width: 800px;
+    height: 276px;
+}
+
+#feetImg {
+    width: 800px;
+    height: 108px;
+}
+
+
+/* BUTTON STYLES */
+
+/* for all buttons on both screens */
+.btn {
+    border: solid 2px #FFF;
+    
+    padding: 10px;
+    color: #FFF;
+}
+
+/* style change on click */
+.btn:active, .print-receipt-active {
+    background-color: #FFF;
+    border: solid 1px transparent;
+    color: #4b7492;
+}
+
+.btn:hover {
+    cursor: default;
+}
+
+/* for all buttons on first screen */
+
+
+.outfitBtn {
+    position: absolute;
+    bottom: 10%;
+    background-color: white;
+    border-radius: 10%;
+    
+    
+}
+
+.outfit {
+    position: absolute;
+    bottom: 100px;
+    border-radius: 10px;
+    
+    
+}
+
+.out {
+    position: absolute;
+    bottom: 11%;
+    border-radius: 10px;
+    
+    
+}
+
+
+
+
+
+/* for individual buttons on first screen */
+
+
+#genderOutfit {
+    bottom: auto;
+    left: auto;
+    top: 84%;
+    right: 52.5%;
+    color: #fff;
+    border: 4px #fff solid;
+    font-size: 25px;
+}
+
+.next {
+     width: 40px;
+}
+#nextOutfit {
+    left: 5.8%;
+}
+
+#randomOutfit {
+    left: 11%;
+}
+
+#sideOutfit {
+    left: 16.3%;
+}
+
+#orderOutfit {
+    right: 2%;
+    color: #fff;
+    border: 4px #fff solid;
+    font-size: 25px;
+    
+}
+
+
+/* OUTFIT INFORMATION STYLES */
+
+.info {
+    position: absolute; /* DO NOT REMOVE */
+    
+    left: 1000px;
+    width: 800px;
+    border-left: 2px #fff solid;
+    padding-left: 10px;
+
+}
+
+.info h2 {
+    margin: 0;
+}
+
+.info p {
+    font-size: 15px;
+    padding-right: 160px;
+}
+
+#headInfo {
+   top: 150px;
+}
+
+#torsoInfo {
+    top: 345px;
+}
+
+#legsInfo {
+    top: 540px;
+}
+
+#feetInfo {
+    top: 750px;
+}
+
+
+/* SHOPPING CART STYLES */
+
+#cart {
+    z-index: 9000; /* DO NOT REMOVE */
+    
+    background-color: darkslategrey;
+     
+}
+
+/* selected products list */
+#products {
+    position: absolute;
+    width: 1200px;
+    top: 80px;
+    left: 100px;
+    overflow: auto;
+}
+
+/* close cart/return button */
+#close-cart {
+    position: absolute;
+    left: 100px;
+    bottom: 100px;
+}
+
+/* header row style */
+#column-labels {
+    border: none;
+    padding-bottom: 0;
+    
+    font-size: 120%;
+    font-weight: bold;
+}
+
+/* row styles */
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    border-top: solid 1px #FFF;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.row:hover {
+    cursor: default; /* DO NOT REMOVE */
+}
+
+/* column styles */
+.column {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border: solid 1px #FFF;
+}
+
+/* removes image styles from column label row */
+#column-labels .image {
+    height: auto;
+    overflow: auto;
+    border: none;
+}
+
+.image img {
+    height: 100%;
+    width: 350px;
+}
+
+.title-desc {
+    width: 25%;
+}
+
+.title-desc h2 {
+    margin-bottom: 0;
+}
+
+.size {
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.size-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+    transition: all 1s;
+    
+    background-color: #FFF;
+    color: #4b7492;
+}
+
+.size-select:nth-child(n+5) {
+    margin-bottom: 0;
+}
+
+.size-select-active {
+    opacity: 1;
+}
+
+.size-select:last-child {
+    margin-right: 0;
+}
+
+.colour {
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.colour-select {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+    transition: all 1s;
+    
+    border: solid 1px transparent;
+}
+
+.colour-select:nth-child(n+5) {
+    margin-bottom: 0;
+}
+
+.colour-select-active {
+    opacity: 1;
+    
+    border: solid 1px #FFF;
+}
+
+.colour-select:last-child {
+    margin-right: 0;
+}
+
+.price {
+    width: 10%;
+    
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.remove {
+    width: 5%;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.column h2 {
+    margin: 0;
+}
+
+/* styles for summary/total list */
+#total-print {
+    position: absolute;
+    width: 400px;
+    top: 70px;
+    right: 100px;
+    overflow: auto;
+    
+    
+    padding: 10px;  
+}
+
+#total-print h1 {
+    margin-top: 0;
+    font-size: 50px;
+    font-family: Trattatello;
+    margin-left: 40px;
+    margin-bottom: auto;
+}
+#total-print h4 {
+   
+    font-size: 25px;
+    font-family: Trattatello;
+    margin-left: 70px;
+    font-weight: 200px;
+    margin-top: auto;
+}
+
+#total-print span {
+    display: inline-block;
+    float: right;
+}
+
+#total-print h2 {
+    margin-bottom: 0;
+}
+
+#selection div {
+    overflow: auto;
+}
+
+#selection h3 {
+    margin-bottom: 0;
+}
+
+#selection p {
+    margin-top: 0;
+    padding: 10px;
+}
+
+/* print receipt button */
+#print-receipt {
+    text-align: center;
+    transition: all 1s;
+    
+    margin-top: 30px;
+}

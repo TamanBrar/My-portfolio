@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+
+    <head>
+        
+        <meta charset="utf-8" />
+    
+        <title>Conceptual Ordering App Framework</title>
+        
+        <!-- link to swiper styles -->
+        <link href="../css/swiper.css" rel="stylesheet" type="text/css" >
+        <!-- link to app styles -->
+        <link href="../css/main.css" rel="stylesheet" type="text/css" >
+        
+        <!-- load jquery -->
+        <script src="../js/jquery-latest.min.js"></script>
+        <!-- load jquery fullscreen plugin -->
+        <script src="..js/jquery.fullscreen-min.js"></script>
+        
+        <!-- load swiper image slider -->
+        <script src="../js/swiper.min1.js"></script>
+    
+    </head>
+    
+    <body>
+    
+        <!-- main container -->
+        <main>
+            
+            <!-- screen saver - promo/instructions video -->
+            <section id="promotion">
+            
+                <video id="instructions" autoplay loop muted> 
+                    <source src="../videos/intro.mp4" /> 
+                </video>
+            
+            </section>
+            
+            <!-- header -->
+            <header>
+                
+            ADVENTURE OUTFITTERS
+			 <div id="logo">
+        <img src="../images/LOGO.png"></div></header>
+        
+            <!-- outfit selector screen -->
+            <section id="outfitSelector">
+                
+                <!-- gender title - updated in JS -->
+                <div id="genderTitle">MEN</div>
+                
+                <!-- outfit container -->
+                <div id="outfitImgs">
+            
+                    <!-- head images -->
+                    <div id="headImg" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- remove background style and replace TEXT with <img>  -->
+                            
+                            <div class="swiper-slide" >
+                            <img src="../images/F/M/head/0.png">
+                            </div>
+                            
+                            <div class="swiper-slide" >
+                            <img src="../images/F/M/head/1.png">
+                            </div>
+                            <div class="swiper-slide" >
+                            <img src="../images/F/M/head/2.png">
+                            </div>
+                        </div>
+                    </div>
+            
+                    
+                    
+                    
+                    <!-- torso images -->
+                    <div id="torsoImg" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- remove background style and replace TEXT with <img>  -->
+                            
+                            <div class="swiper-slide" >
+                            <img src="../images/F/M/torso/0.png">
+                            
+                        </div>
+                            
+                            <div class="swiper-slide" >
+                            <img src="../images/F/M/torso/1.png">
+                            </div>
+                            <div class="swiper-slide" >
+                            <img src="../images/F/M/torso/2.png">
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- legs images -->
+                    <div id="legsImg" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- remove background style and replace TEXT with <img>  -->
+                            <div class="swiper-slide" >
+                            <img src="../images/F/M/legs/0.png">
+                            </div>
+                            
+                            <div class="swiper-slide" >
+                            <img src="../images/F/M/legs/1.png">
+                            </div>
+                            <div class="swiper-slide" >
+                            <img src="../images/F/M/legs/2.png">
+                                 </div>
+                        </div>
+                    </div>
+            
+                    <!-- feet images -->
+                    <div id="feetImg" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- remove background style and replace TEXT with <img>  -->
+                            <div class="swiper-slide">
+                            <img src="../images/F/M/feet/0.png">
+                            </div>
+                            <div class="swiper-slide" >
+                            <img src="../images/F/M/feet/1.png">
+                            </div>
+                            <div class="swiper-slide" >
+                            <img src="../images/F/M/feet/2.png">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- buttons - keep labels text-based -->
+               
+                
+                
+                <div id="nextOutfit" class="btn outfitBtn">
+                    <img class="next" src="../images/Next.png">
+                </div>
+                
+                <div id="randomOutfit" class="btn outfitBtn">
+                <img class="next" src="../images/random.png">
+                </div>
+                
+                <div id="sideOutfit" class="btn outfitBtn">
+                <img class="next" src="../images/back.png">
+                </div>
+               
+                 <div id="genderOutfit" class="btn outfit" style="font-family: 'Swis721 Blk BT';">SHOW FEMALE</div>
+                 <div id="orderOutfit" class="btn out" style="font-family: 'Swis721 Blk BT';" >ORDER OUTFIT</div>
+                
+                <!-- outfit information - generated in JS -->
+                <div id="headInfo" class="info"></div>
+                <div id="torsoInfo" class="info"></div>
+                <div id="legsInfo" class="info"></div>
+                <div id="feetInfo" class="info"></div>
+            
+            </section>
+            
+            <!-- SHOPPING CART SCREEN -->
+            <section id="cart">
+            
+                <!-- selected products rows - generated in JS -->
+                <div id="products"></div>
+                
+                <!-- selected products summary -->
+                <div id="total-print">
+                                            
+                    <h1>ADVENTURE</h1>
+                    <h4>BUILD YOUR GOALS</h4>
+                    <hr>
+
+                    <!-- generated in JS -->
+                    <div id="selection"></div>
+                    
+                    <hr>
+
+                    <!-- generated in JS -->
+                    <p>Subtotal: <span id="subtotal"></span></p>
+                    <p>Taxes: <span id="taxes"></span></p>
+                    <h2>TOTAL: <span id="total"></span></h2>
+                    
+                    <hr>
+                    
+                    <h2>Checkout Steps</h2>
+                    
+                    <ol>
+                        <li>Print receipt</li>
+                        <li>Bring to cashier</li>
+                        <li>Pay for items</li>
+                        <li>Get cool clothes</li>
+                    </ol>
+
+                    <div id="print-receipt" class="btn">PRINT RECEIPT</div>
+                    
+                    <!-- hidden - for use to print receipt -->
+                    <iframe id="receipt" style="display:none"></iframe>
+                                            
+                </div>
+                
+                <!-- close cart button -->
+                <div id="close-cart" class="btn">
+                <img class="next" src="../images/return.png">
+                </div>
+            
+            </section>
+            
+            <!-- footer -->
+            <footer>&copy; COPYRIGHT 2021 TAMAN BRAR </footer>
+        
+        </main>
+        
+        <!-- load scale site code for development -->
+        <script src="../js/scale-site1.js"></script>
+        
+        <!-- product information -->
+        <script src="../js/info1.js"></script>
+        
+        <!-- load main app -->
+        <script src="../js/main1.js"></script>
+    
+    </body>
+
+</html>
